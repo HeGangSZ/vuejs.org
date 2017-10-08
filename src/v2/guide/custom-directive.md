@@ -42,7 +42,9 @@ If you want to register a directive locally instead, components also accept a `d
 ``` js
 directives: {
   focus: {
-    // directive definition
+      inserted: function (el) {
+        el.focus()
+      }
   }
 }
 ```
